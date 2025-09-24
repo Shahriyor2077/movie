@@ -9,11 +9,9 @@ import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import { createImageUrl } from "@/shared/utils";
 import { TbPlayerPlayFilled } from "react-icons/tb";
-
 interface Props {
   data: any;
 }
-
 export const Swipers: FC<Props> = memo(({ data }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
@@ -26,7 +24,7 @@ export const Swipers: FC<Props> = memo(({ data }) => {
             "--swiper-pagination-color": "#fff",
           } as React.CSSProperties
         }
-        loop={true}
+        loop={false}
         spaceBetween={10}
         navigation={true}
         thumbs={{ swiper: thumbsSwiper }}
@@ -71,7 +69,7 @@ export const Swipers: FC<Props> = memo(({ data }) => {
                 </div>
 
                 <div className="w-[70%]">
-                  <button className="mt-8 py-4 bg-white text-py font-inter font-medium rounded-lg w-full cursor-pointer flex items-center justify-center gap-2  border border-transparent hover:bg-transparent hover:border hover:border-py hover:text-white transition ">
+                  <button className="mt-8 py-4 bg-white text-red-700 text-py font-inter font-medium rounded-lg w-full cursor-pointer flex items-center justify-center gap-2  border border-transparent hover:bg-transparent hover:border hover:border-py hover:text-white transition ">
                     <TbPlayerPlayFilled />
                     See More
                   </button>
@@ -83,7 +81,7 @@ export const Swipers: FC<Props> = memo(({ data }) => {
       </Swiper>
       <Swiper
         onSwiper={setThumbsSwiper}
-        loop={true}
+        loop={false}
         spaceBetween={10}
         slidesPerView={2}
         freeMode={true}
@@ -97,7 +95,7 @@ export const Swipers: FC<Props> = memo(({ data }) => {
           1280: { slidesPerView: 5, spaceBetween: 15 },
         }}
       >
-        {data?.map((item: any) => (
+        {data?.slice(0, 6).map((item: any) => (
           <SwiperSlide key={item.id} className="cursor-pointer">
             <img
               src={createImageUrl(item.backdrop_path)}

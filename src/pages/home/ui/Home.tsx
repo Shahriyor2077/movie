@@ -6,6 +6,7 @@ import { memo } from "react";
 export const Home = memo(() => {
   const {getMovies} = useMovie()
   const {data} = getMovies()
+  console.log(data);
   
   return <div>
     <Hero/>

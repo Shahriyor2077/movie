@@ -7,6 +7,7 @@ export const fetchMovies = async () => {
   return (await response).data;
 };
 
+
 export const fetchMovieById = async (id: string) => {
   const response = await api.get(`/movie/${id}`);
   return response.data;
