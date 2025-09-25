@@ -1,14 +1,31 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchMovies, fetchMovieById, fetchMovieInfo } from "../api/fetchApi";
+import type { ImovieParams } from "./types";
 
 export const useMovie = () => {
-  // SuccessType, ErrorType
-  const getMovies = () =>
+  const getMovies = (params: ImovieParams) =>
     useQuery<any, any>({
-      queryKey: ["movieKey"], // deps
-      queryFn: fetchMovies,
+      queryKey: [
+        "movieKey",
+        params.page,
+        params.sort_by ?? "",
+        params.release_date_from ?? "",
+        params.release_date_to ?? "",
+      ],
+      queryFn: () =>
+        fetchMovies(
+          params.page,
+          params.sort_by,
+          params.release_date_from,
+          params.release_date_to
+        ),
       retry: 0,
+      refetchOnWindowFocus: false,
+      gcTime: 1000*60*10,
+      staleTime: 1000*60
     });
+
+    
   // // SuccessType, ErrorType, BodyType
   // useMutation<any, any,any>({
   //     mutationFn: (body)

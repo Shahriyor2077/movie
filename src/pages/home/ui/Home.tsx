@@ -5,7 +5,7 @@ import { memo } from "react";
 
 export const Home = memo(() => {
   const {getMovies} = useMovie()
-  const {data} = getMovies()
+  const {data} = getMovies({ page: "1" })
   console.log(data);
   
   return <div>

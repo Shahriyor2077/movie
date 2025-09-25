@@ -15,7 +15,7 @@ import appstore from "../../../shared/assets/appstore.svg";
 export const Footer = memo(() => {
   return (
     <footer className=" text-gray-300 py-10">
-      <div className="container mx-auto bg-[#111] rounded-xl px-6 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="container mx-auto  rounded-xl px-6 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         <div className="space-y-4">
           <img src={footerlogo} alt="footerlogo" className="w-24" />
           <div className="flex flex-col gap-3">
@@ -33,46 +33,46 @@ export const Footer = memo(() => {
         </div>
 
         <div>
-          <h3 className="text-white font-semibold mb-4">About Us</h3>
+          <h3 className="text-red-500 font-semibold mb-4">About Us</h3>
           <ul className="space-y-3">
-            <li className="flex items-center gap-2 hover:text-red-500 cursor-pointer">
+            <li className="flex items-center text-red-700 gap-2 hover:text-red-500 cursor-pointer">
               <IoDocumentTextOutline /> Public Offer
             </li>
-            <li className="flex items-center gap-2 hover:text-red-500 cursor-pointer">
+            <li className="flex items-center text-red-700 gap-2 hover:text-red-500 cursor-pointer">
               <RiAdvertisementFill /> Advertising
             </li>
-            <li className="flex items-center gap-2 hover:text-red-500 cursor-pointer">
+            <li className="flex items-center text-red-700 gap-2 hover:text-red-500 cursor-pointer">
               <FaQuestionCircle /> F.A.Q
             </li>
-            <li className="flex items-center gap-2 hover:text-red-500 cursor-pointer">
+            <li className="flex items-center text-red-700 gap-2 hover:text-red-500 cursor-pointer">
               <MdContactPhone /> Contacts
             </li>
           </ul>
         </div>
 
         <div>
-          <h3 className="text-white font-semibold mb-4">Categories</h3>
+          <h3 className="text-red-500 font-semibold mb-4">Categories</h3>
           <ul className="space-y-3">
-            <li className="flex items-center gap-2 hover:text-red-500 cursor-pointer">
+            <li className="flex items-center text-red-700 gap-2 hover:text-red-500 cursor-pointer">
               <MdOutlineLocalMovies /> Movies
             </li>
-            <li className="flex items-center gap-2 hover:text-red-500 cursor-pointer">
+            <li className="flex items-center text-red-700 gap-2 hover:text-red-500 cursor-pointer">
               <MdTheaters /> Theater
             </li>
-            <li className="flex items-center gap-2 hover:text-red-500 cursor-pointer">
+            <li className="flex items-center text-red-700 gap-2 hover:text-red-500 cursor-pointer">
               <TbMicrophone2 /> Concerts
             </li>
-            <li className="flex items-center gap-2 hover:text-red-500 cursor-pointer">
+            <li className="flex items-center text-red-700 gap-2 hover:text-red-500 cursor-pointer">
               <GiBasketballBall /> Sports
             </li>
           </ul>
         </div>
 
         <div>
-          <h3 className="text-white font-semibold mb-4">Contact Us</h3>
+          <h3 className="text-red-500 font-semibold mb-4">Contact Us</h3>
           <p className="text-red-500 font-semibold mb-4">+998 (91) 012-20-77</p>
-          <h3 className="text-white font-semibold mb-3">Follow Us</h3>
-          <div className="flex space-x-4 text-2xl">
+          <h3 className="text-red-500 font-semibold mb-3">Follow Us</h3>
+          <div className="flex text-red-500 space-x-4 text-2xl">
             <a href="#" className="hover:text-red-500">
               <FaInstagram />
             </a>

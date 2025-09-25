@@ -15,3 +15,11 @@ export interface IMovie {
   vote_average: number; 
   vote_count: number;
 }
+
+export interface ImovieParams{
+  page: string,
+  sort_by?: string
+  release_date_from?: string
+  release_date_to?: string
+
+}
