@@ -32,7 +32,7 @@ export const MovieFilter = memo(() => {
   }
 
   return (
-    <div className="my-3">
+    <div className=" container my-3">
       <div className="mt-3 flex items-center gap-3">
         <DatePicker.RangePicker
           value={[

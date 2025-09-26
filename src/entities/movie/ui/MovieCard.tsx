@@ -17,6 +17,7 @@ export const MovieCard: FC<Props> = memo((props) => {
       onClick={() => navigate(`/movie-detail/${movie.id}`)}
     >
       <div className="relative aspect-[3/4] w-full bg-slate-800">
+      
         <img
           src={createImageUrl(movie.poster_path)}
           alt={movie.title}
@@ -32,6 +33,9 @@ export const MovieCard: FC<Props> = memo((props) => {
         </h3>
         <p className="text-[10px] uppercase tracking-wide text-white/60 mt-1">
           {movie.original_language}
+        </p>
+        <p className="text-[10px] uppercase tracking-wide text-white/60 mt-1">
+          {movie.vote_average.toFixed(1)}
         </p>
       </div>
     </div>

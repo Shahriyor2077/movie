@@ -16,7 +16,7 @@ export const Movie = memo(() => {
   const release_date_to = searchParams.get("release_date_to") ?? undefined;
   const { data } = getMovies({ page, sort_by, release_date_from, release_date_to });
   return (
-    <div className="About">
+    <div className=" container my-3">
       <h2>Total: {data?.total_results?.toLocaleString()}</h2>
       <MovieSort />
       <MovieFilter />

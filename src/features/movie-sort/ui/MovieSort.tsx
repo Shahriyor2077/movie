@@ -13,7 +13,7 @@ export const MovieSort = memo(() => {
   }
 
   return (
-    <div className="my-3">
+    <div className=" container my-3">
       <Select
         className="w-60"
         placeholder="Sort by"

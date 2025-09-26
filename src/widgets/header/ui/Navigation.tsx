@@ -7,7 +7,7 @@ import searchIcon from "@/shared/assets/search.svg";
 
 export const Navigation = memo(() => {
   return (
-    <nav className="flex gap-8">
+    <nav className=" flex gap-8">
       <NavLink
         to=""
         className="flex flex-col items-center text-gray-900 dark:text-white font-medium hover:text-red-500 transition"

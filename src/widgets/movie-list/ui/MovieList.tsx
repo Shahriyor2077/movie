@@ -1,5 +1,6 @@
 import { MovieCard, type IMovie } from "@/entities/movie";
 import { memo, type FC } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   movies?: IMovie[];
@@ -7,6 +8,7 @@ interface Props {
 
 export const MovieList: FC<Props> = memo((props) => {
   const { movies } = props;
+  const navitgate=useNavigate()
 
   return (
     <div className="container mx-auto max-w-[1200px] px-6">
@@ -15,7 +17,9 @@ export const MovieList: FC<Props> = memo((props) => {
           <span className="text-[10px] uppercase tracking-wide font-medium text-red-700">
             During the week
           </span>
-          <span className=" text-[10px] cursor-pointer uppercase tracking-wide text-red-700 font-medium px-2 py-0.5 rounded">
+          <span className=" text-[10px] cursor-pointer uppercase tracking-wide text-red-700 font-medium px-2 py-0.5 rounded"
+          onClick={()=>navitgate("/movie")}
+          >
             See more›+
           </span>
         </div>
