@@ -1,3 +1,4 @@
+import { Button } from "antd";
 import { useEffect, useState, memo } from "react";
 
 const DarkModeToggle = memo(() => {
@@ -24,12 +25,12 @@ const DarkModeToggle = memo(() => {
   }, []);
 
   return (
-    <button
+    <Button
       onClick={toggleDark}
       className="p-2 rounded cursor-pointer bg-gray-200 dark:bg-gray-700 dark:text-white"
     >
       {isDark ? "☀️ Light" : "🌛 Dark"}
-    </button>
+    </Button>
   );
 });
 
