@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
+import { authSlice } from '../../features/auth'
 
 export const store = configureStore({
   reducer: {
-    fake: () => "lorem"
+    fake: () => "lorem",
+    auth: authSlice.reducer
   },
 })
 

@@ -65,6 +65,7 @@ export const Navigation = memo(() => {
         <AiOutlineSearch size={24} className="mb-1" />
         {t("header.navigation.search")}
       </NavLink>
+      
     </nav>
   );
 });

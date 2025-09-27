@@ -74,7 +74,7 @@ export const Swipers: FC<Props> = memo(({ data }) => {
                   <button className="mt-8 py-4 bg-white text-red-700 text-py font-inter font-medium rounded-lg w-full cursor-pointer flex items-center justify-center gap-2  border border-transparent hover:bg-transparent hover:border hover:border-py hover:text-white transition ">
                     <TbPlayerPlayFilled />
                     {t("swiper.see more")}
-                  </button>
+                  </button>sw
                 </div>
               </div>
             </div>
