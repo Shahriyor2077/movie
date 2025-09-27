@@ -3,6 +3,7 @@ import { useMovie } from "../../model/useMovie";
 import { createImageUrl } from "@/shared/utils";
 import { Image } from "antd";
 import { Link } from "react-router-dom";
+import { Loading } from "@/shared/ui/Loading";
 
 interface Props {
   id: string;
@@ -11,9 +12,11 @@ interface Props {
 export const MovieInfo: FC<Props> = memo((props) => {
   const { id } = props;
   const { getMovieById, getMovieInfo } = useMovie();
-  const { data } = getMovieById(id);
-  const { data: imageData } = getMovieInfo(id, "images");
+  const { data, isLoading } = getMovieById(id);
+  const { data: imageData, isLoading: imageLoading } = getMovieInfo(id, "images");
   console.log(data);
+
+  if (isLoading || imageLoading) return <Loading />;
 
   const title = data?.title || data?.original_title || "Movie Title";
   const year = data?.release_date ? data.release_date.slice(0, 4) : "—";

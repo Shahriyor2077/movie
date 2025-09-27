@@ -2,11 +2,14 @@ import { memo } from "react";
 import { useCrew } from "../model/useCrew";
 import { useParams } from "react-router-dom";
 import { createImageUrl } from "@/shared/utils";
+import { Loading } from "@/shared/ui/Loading";
 
 export const CrewView = memo(() => {
   const { id } = useParams();
   const { getCrewById } = useCrew();
-  const { data } = getCrewById(id as string);
+  const { data, isLoading } = getCrewById(id as string);
+
+  if (isLoading) return <Loading />;
 
   return (
     <div className="container">

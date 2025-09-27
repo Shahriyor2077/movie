@@ -2,13 +2,14 @@ import { memo } from "react";
 import { useParams } from "react-router-dom";
 import { useMovie } from "@/entities/movie";
 import { createImageUrl } from "@/shared/utils/index";
+import { Loading } from "@/shared/ui/Loading";
 
 export const Other = memo(() => {
   const { id } = useParams();
   const { getMovieInfo } = useMovie();
   const { data, isLoading } = getMovieInfo(id as string, "credits");
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <Loading />;
   if (!data?.crew?.length) return <div>No crew info</div>;
 
   return (

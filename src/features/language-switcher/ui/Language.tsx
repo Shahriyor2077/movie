@@ -1,36 +1,24 @@
 import { memo } from "react";
 import { useTranslation } from "react-i18next";
+import { Select } from "antd";
 
 export const LanguageSwitcher = memo(() => {
-  const{i18n} = useTranslation()
+  const { i18n } = useTranslation();
+
+  const handleChange = (value: string) => {
+    i18n.changeLanguage(value);
+  };
+
   return (
-    <select value={i18n.language} onChange={(e)=>i18n.changeLanguage(e.target.value)} className="flex flex-col items-center text-gray-900 dark:text-white font-medium hover:text-red-500 transition">
-      <option value="uz">uz</option>
-      <option value="en">en</option>
-      <option value="ru">ru</option>
-    </select>
+    <Select
+      value={i18n.language}
+      onChange={handleChange}
+      style={{ width: 90}}
+      options={[
+        { value: "uz", label: "Uz" },
+        { value: "en", label: "En" },
+        { value: "ru", label: "Ru" },
+      ]}
+    />
   );
 });
-
-// import { memo } from "react";
-// import { useTranslation } from "react-i18next";
-// import { Select } from "antd";
-
-// const { Option } = Select;
-
-// export const LanguageSwitcher = memo(() => {
-//   const { i18n } = useTranslation();
-
-//   return (
-//     <Select
-//       value={i18n.language}
-//       onChange={(value) => i18n.changeLanguage(value)}
-//       className="w-24"
-//       dropdownClassName="dark:bg-gray-800"
-//     >
-//       <Option value="uz">Uz</Option>
-//       <Option value="en">En</Option>
-//       <Option value="ru">Ru</Option>
-//     </Select>
-//   );
-// });

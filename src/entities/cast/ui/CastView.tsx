@@ -2,6 +2,7 @@ import { memo, type FC } from 'react'
 import { useCast } from '../model/useCast'
 import { createImageUrl } from '@/shared/utils'
 import { useNavigate } from 'react-router-dom'
+import { Loading } from '@/shared/ui/Loading'
 
 interface Props {
   id: string
@@ -11,8 +12,10 @@ interface Props {
 export const CastView:FC<Props> = memo((props) => {
   const {id, type} = props
   const {getCasts} = useCast()
-  const {data} = getCasts(id)
+  const {data, isLoading} = getCasts(id)
   const navigate = useNavigate()
+  
+  if (isLoading) return <Loading />;
   
   return (
     <div className='container'>
