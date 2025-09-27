@@ -43,6 +43,8 @@ export const MovieFilter = memo(() => {
           allowEmpty={[true, true]}
         />
         <Button onClick={clearDates}>Clear</Button>
+    
+
       </div>
     </div>
   )

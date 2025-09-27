@@ -81,9 +81,9 @@ export const MovieInfo: FC<Props> = memo((props) => {
       </section>
       <section className="container mt-10">
         <h2>Tabs</h2>
-        <div className="flex gap-4">
+        <div className="flex gap-4 mb-4">
+          <Link to="">Cast</Link>
           <Link to="review">Review</Link>
-          <Link to="cast">Cast</Link>
           <Link to="other">Others</Link>
         </div>
       </section>
