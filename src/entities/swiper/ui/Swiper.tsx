@@ -9,11 +9,13 @@ import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import { createImageUrl } from "@/shared/utils";
 import { TbPlayerPlayFilled } from "react-icons/tb";
+import { useTranslation } from "react-i18next";
 interface Props {
   data: any;
 }
 export const Swipers: FC<Props> = memo(({ data }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+  const {t}=useTranslation()
 
   return (
     <>
@@ -71,7 +73,7 @@ export const Swipers: FC<Props> = memo(({ data }) => {
                 <div className="w-[70%]">
                   <button className="mt-8 py-4 bg-white text-red-700 text-py font-inter font-medium rounded-lg w-full cursor-pointer flex items-center justify-center gap-2  border border-transparent hover:bg-transparent hover:border hover:border-py hover:text-white transition ">
                     <TbPlayerPlayFilled />
-                    See More
+                    {t("swiper.see more")}
                   </button>
                 </div>
               </div>

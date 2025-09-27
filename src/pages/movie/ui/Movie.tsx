@@ -5,10 +5,12 @@ import { MoviePagination } from "../../../features/movie-pagination/ui/MoviePagi
 import { useSearchParams } from "react-router-dom";
 import { MovieSort } from "@/features/movie-sort/ui/MovieSort";
 import { MovieFilter } from "@/features/movie-sort/ui/MovieFilter";
+import { useTranslation } from "react-i18next";
 
 export const Movie = memo(() => {
   const { getMovies } = useMovie();
   const [searchParams] = useSearchParams();
+  const {t}=useTranslation()
 
   const page = searchParams.get("page") ?? "1";
   const sort_by = searchParams.get("sort_by") ?? "popularity.desc";
@@ -17,7 +19,8 @@ export const Movie = memo(() => {
   const { data } = getMovies({ page, sort_by, release_date_from, release_date_to });
   return (
     <div className=" container my-3">
-      <h2>Total: {data?.total_results?.toLocaleString()}</h2>
+      <h2 className="container" >
+         {t("total")} : {data?.total_results?.toLocaleString()}</h2>
       <MovieSort />
       <MovieFilter />
       <MovieList movies={data?.results} />

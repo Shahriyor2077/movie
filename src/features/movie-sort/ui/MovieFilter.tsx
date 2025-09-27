@@ -2,11 +2,13 @@ import { memo } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { DatePicker, Button } from 'antd'
 import dayjs from 'dayjs'
+import { useTranslation } from 'react-i18next'
 
 export const MovieFilter = memo(() => {
   const [searchParams, setSearchParams] = useSearchParams()
   const from = searchParams.get('release_date_from') ?? ''
   const to = searchParams.get('release_date_to') ?? ''
+  const {t}=useTranslation()
 
   const onRangeChange = (values: any) => {
     const [start, end] = values || []
@@ -35,17 +37,17 @@ export const MovieFilter = memo(() => {
     <div className=" container my-3">
       <div className="mt-3 flex items-center gap-3">
         <DatePicker.RangePicker
-          value={[
-            from ? dayjs(from, 'YYYY-MM-DD') : null,
-            to ? dayjs(to, 'YYYY-MM-DD') : null,
-          ] as any}
+          value={
+            [
+              from ? dayjs(from, "YYYY-MM-DD") : null,
+              to ? dayjs(to, "YYYY-MM-DD") : null,
+            ] as any
+          }
           onChange={onRangeChange}
           allowEmpty={[true, true]}
         />
-        <Button onClick={clearDates}>Clear</Button>
-    
-
+        <Button onClick={clearDates}>{t("clear")}</Button>
       </div>
     </div>
-  )
+  );
 })

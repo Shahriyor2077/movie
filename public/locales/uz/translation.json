@@ -1,0 +1,37 @@
+{
+  "header": {
+    "navigation": {
+      "home": "Bosh sahifa",
+      "movies": "Kinolar",
+      "bookmark": "Xatcho'p",
+      "search": "Qidiruv"
+    }
+  },
+  "swiper": {
+    "see more": "Ko'proq"
+  },
+  "duringTheWeek": "Hafta davomida",
+  "seeMore": "Ko'proq",
+  "footer": {
+    "ui": {
+      "aboutUs": "Biz haqimizda",
+      "publicOffer": "Ommaviy oferta",
+      "advertising": "Reklama",
+      "faq": "Tez-tez so‘raladigan savollar",
+      "contacts": "Kontaktlar",
+      "categories": "Kategoriyalar",
+      "movies": "Filmlar",
+      "theater": "Teatr",
+      "concerts": "Konsertlar",
+      "sports": "Sport",
+      "contactUs": "Biz bilan bog‘laning",
+      "phone": "+998 (91) 012-20-77",
+      "followUs": "Bizni kuzating"
+    }
+  },
+  "total": "Jami",
+  "popular": "Ommabop",
+  "votePlus": "Ovoz +",
+  "voteMinus": "Ovoz -",
+  "clear": "Tozalash"
+}

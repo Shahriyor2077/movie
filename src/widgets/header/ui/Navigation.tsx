@@ -1,41 +1,70 @@
-import { memo } from 'react'
-import { NavLink } from 'react-router-dom';
-import homeIcon from "@/shared/assets/bilet.svg";
-import movieIcon from "@/shared/assets/afisha.svg";
-import bookmarkIcon from "@/shared/assets/seans.svg";
-import searchIcon from "@/shared/assets/search.svg";
+import { memo } from "react";
+import { NavLink } from "react-router-dom";
+import { AiOutlineHome, AiOutlineSearch } from "react-icons/ai";
+import { BiMoviePlay } from "react-icons/bi";
+import { BsBookmark } from "react-icons/bs";
+import { useTranslation } from "react-i18next";
 
 export const Navigation = memo(() => {
+  const { t } = useTranslation();
+
   return (
-    <nav className=" flex gap-8">
+    <nav className="flex gap-8">
       <NavLink
-        to=""
-        className="flex flex-col items-center text-gray-900 dark:text-white font-medium hover:text-red-500 transition"
+        to="/"
+        className={({ isActive }) =>
+          `flex flex-col items-center font-medium transition ${
+            isActive
+              ? "text-red-500"
+              : "text-gray-900 dark:text-white hover:text-red-500"
+          }`
+        }
       >
-        <img src={homeIcon} alt="Home" className="h-6 w-6 mb-1" />
-        Home
+        <AiOutlineHome size={24} className="mb-1" />
+        {t("header.navigation.home")}
       </NavLink>
+
       <NavLink
         to="/movie"
-        className="flex flex-col items-center text-gray-900 dark:text-white font-medium hover:text-red-500 transition"
+        className={({ isActive }) =>
+          `flex flex-col items-center font-medium transition ${
+            isActive
+              ? "text-red-500"
+              : "text-gray-900 dark:text-white hover:text-red-500"
+          }`
+        }
       >
-        <img src={movieIcon} alt="Movie" className="h-6 w-6 mb-1" />
-        Movie
+        <BiMoviePlay size={24} className="mb-1" />
+        {t("header.navigation.movies")}
       </NavLink>
+
       <NavLink
         to="/bookmark"
-        className="flex flex-col items-center text-gray-900 dark:text-white font-medium hover:text-red-500 transition"
+        className={({ isActive }) =>
+          `flex flex-col items-center font-medium transition ${
+            isActive
+              ? "text-red-500"
+              : "text-gray-900 dark:text-white hover:text-red-500"
+          }`
+        }
       >
-        <img src={bookmarkIcon} alt="Bookmark" className="h-6 w-6 mb-1" />
-        Bookmark
+        <BsBookmark size={22} className="mb-1" />
+        {t("header.navigation.bookmark")}
       </NavLink>
+
       <NavLink
         to="/search"
-        className="flex flex-col items-center text-gray-900 dark:text-white font-medium hover:text-red-500 transition"
+        className={({ isActive }) =>
+          `flex flex-col items-center font-medium transition ${
+            isActive
+              ? "text-red-500"
+              : "text-gray-900 dark:text-white hover:text-red-500"
+          }`
+        }
       >
-        <img src={searchIcon} alt="Search" className="h-6 w-6 mb-1" />
-        Search
+        <AiOutlineSearch size={24} className="mb-1" />
+        {t("header.navigation.search")}
       </NavLink>
     </nav>
   );
-})
+});

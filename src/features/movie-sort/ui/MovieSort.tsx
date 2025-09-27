@@ -1,6 +1,7 @@
 import { memo } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { Select } from 'antd'
+import { useTranslation } from 'react-i18next'
 
 export const MovieSort = memo(() => {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -11,6 +12,7 @@ export const MovieSort = memo(() => {
     searchParams.set('page', '1')
     setSearchParams(searchParams)
   }
+  const {t}=useTranslation()
 
   return (
     <div className=" container my-3">
@@ -20,11 +22,11 @@ export const MovieSort = memo(() => {
         value={sort_by}
         onChange={onChange}
         options={[
-          { value: 'popularity.desc', label: 'Popular' },
-          { value: 'vote_average.asc', label: 'Vote -' },
-          { value: 'vote_average.desc', label: 'Vote +' }
+          { value: "popularity.desc", label: t("popular") },
+          { value: "vote_average.asc", label: t("voteMinus") },
+          { value: "vote_average.desc", label: t("votePlus") },
         ]}
       />
     </div>
-  )
+  );
 })

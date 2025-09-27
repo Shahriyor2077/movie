@@ -1,0 +1,37 @@
+{
+  "header": {
+    "navigation": {
+      "home": "Home",
+      "movies": "Movies",
+      "bookmark": "Bookmark",
+      "search": "Search"
+    }
+  },
+  "swiper": {
+    "see more": "See more"
+  },
+  "duringTheWeek": "During the week",
+  "seeMore": "See more",
+  "footer": {
+    "ui": {
+      "aboutUs": "About Us",
+      "publicOffer": "Public Offer",
+      "advertising": "Advertising",
+      "faq": "F.A.Q",
+      "contacts": "Contacts",
+      "categories": "Categories",
+      "movies": "Movies",
+      "theater": "Theater",
+      "concerts": "Concerts",
+      "sports": "Sports",
+      "contactUs": "Contact Us",
+      "phone": "+998 (91) 012-20-77",
+      "followUs": "Follow Us"
+    }
+  },
+  "total": "Total",
+  "popular": "Popular",
+  "votePlus": "Vote +",
+  "voteMinus": "Vote -",
+  "clear": "Clear"
+}

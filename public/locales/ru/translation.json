@@ -1,0 +1,37 @@
+{
+  "header": {
+    "navigation": {
+      "home": "Главная",
+      "movies": "Фильмы",
+      "bookmark": "Закладки",
+      "search": "Поиск"
+    }
+  },
+  "swiper": {
+    "see more": "Больше"
+  },
+  "duringTheWeek": "В течение недели",
+  "seeMore": "Больше",
+  "footer": {
+    "ui": {
+      "aboutUs": "О нас",
+      "publicOffer": "Публичная оферта",
+      "advertising": "Реклама",
+      "faq": "Часто задаваемые вопросы",
+      "contacts": "Контакты",
+      "categories": "Категории",
+      "movies": "Фильмы",
+      "theater": "Театр",
+      "concerts": "Концерты",
+      "sports": "Спорт",
+      "contactUs": "Свяжитесь с нами",
+      "phone": "+998 (91) 012-20-77",
+      "followUs": "Подписывайтесь на нас"
+    }
+  },
+  "total": "Итого",
+  "popular": "Популярное",
+  "votePlus": "Голос +",
+  "voteMinus": "Голос -",
+  "clear": "Очистить"
+}
