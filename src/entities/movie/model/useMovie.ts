@@ -11,13 +11,15 @@ export const useMovie = () => {
         params.sort_by ?? "",
         params.release_date_from ?? "",
         params.release_date_to ?? "",
+        params.with_genres ?? "",
       ],
       queryFn: () =>
         fetchMovies(
           params.page,
           params.sort_by,
           params.release_date_from,
-          params.release_date_to
+          params.release_date_to,
+          params.with_genres
         ),
       retry: 0,
       refetchOnWindowFocus: false,

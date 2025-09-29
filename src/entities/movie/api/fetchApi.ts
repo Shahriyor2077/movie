@@ -5,11 +5,13 @@ export const fetchMovies = async (
   page: ImovieParams["page"],
   sort_by?: ImovieParams["sort_by"],
   release_date_from?: ImovieParams["release_date_from"],
-  release_date_to?: ImovieParams["release_date_to"]
+  release_date_to?: ImovieParams["release_date_to"],
+  with_genres?: ImovieParams["with_genres"]
 ) => {
   const response = api.get("discover/movie", {
     params: {
       without_genres: "18,36,27,10402,10749",
+      with_genres,
       page,
       sort_by,
       release_date_from,

@@ -2,7 +2,7 @@ import { memo } from 'react';
 
 export const Loading = memo(() => {
   return (
-    <div className="flex items-center justify-center min-h-[400px]">
+    <div className="flex items-center justify-center min-h-[300px]">
       <div className="flex flex-col items-center gap-6">
         <div className="relative">
           <div className="w-16 h-16 border-4 border-gray-200 rounded-full"></div>
@@ -16,4 +16,3 @@ export const Loading = memo(() => {
     </div>
   );
 });
-

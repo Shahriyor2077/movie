@@ -21,4 +21,5 @@ export interface ImovieParams{
   sort_by?: string
   release_date_from?: string
   release_date_to?: string
+  with_genres?: string
 }

@@ -4,6 +4,7 @@ import { useMovie } from "@/entities/movie";
 import { createImageUrl } from "@/shared/utils/index";
 import { Loading } from "@/shared/ui/Loading";
 
+
 export const Other = memo(() => {
   const { id } = useParams();
   const { getMovieInfo } = useMovie();
