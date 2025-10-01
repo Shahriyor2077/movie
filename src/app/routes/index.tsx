@@ -12,6 +12,7 @@ const Other = lazy(() => import("@/pages/movie-detail/other"));
 const CrewDetail = lazy(() => import("@/pages/crew-detail"));
 const Login = lazy(() => import("@/pages/login"));
 
+
 const AppRouter = () => {
   const router = useRoutes([
     {
@@ -23,6 +24,7 @@ const AppRouter = () => {
         { path: "/bookmark", element: <Bookmark /> },
         { path: "/search", element: <Search /> },
         { path: "/login", element: <Login /> },
+      
         {
           path: "/movie-detail/:id",
           element: <MovieDetail />,
@@ -38,5 +40,6 @@ const AppRouter = () => {
   ]);
   return router;
 };
+
 
 export default memo(AppRouter);

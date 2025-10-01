@@ -39,11 +39,11 @@ export const MovieCard: FC<Props> = memo((props) => {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <button
-          className="absolute top-2 right-2 p-2 bg-black/60 rounded-full text-white hover:text-red-500 transition"
+          className="absolute top-2 right-2 p-2 rounded-full text-white hover:text-red-500 transition-colors bg-black/60 dark:bg-white/20 backdrop-blur-sm ring-1 ring-white/20 dark:ring-white/30"
           onClick={handleClick}
         >
           <FiBookmark size={18}
-          className={isBookmark ? "text-red-500" : "text-white"}
+          className={isBookmark ? "text-red-500" : "text-white dark:text-white"}
            />
         </button>
       </div>

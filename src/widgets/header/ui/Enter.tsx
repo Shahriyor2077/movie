@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import type { RootState } from "../../../app/store";
 import { Button, Dropdown } from "antd";
+import { LoginOutlined } from "@ant-design/icons";
 
 export const Enter = memo(() => {
   const navigate = useNavigate();
@@ -26,14 +27,18 @@ export const Enter = memo(() => {
           <img
             src={user.picture}
             alt="user"
-            className="size-10 rounded-full cursor-pointer"
+            className="size-8 md:size-10 rounded-full cursor-pointer border border-gray-300 dark:border-gray-600"
           />
         </Dropdown>
       ) : (
-        <Button>
-          {/* className="bg-white text-black px-5 py-1 cursor-pointer rounded
-          font-medium hover:bg-red-500 hover:text-white transition shadow" */}
-          Kirish
+        <Button
+          type="primary"
+          icon={<LoginOutlined />}
+          onClick={() => navigate("/login")}
+          className="flex items-center"
+        >
+          {/* Matn faqat md va undan katta ekranlarda ko‘rinadi */}
+          <span className="hidden md:inline">Kirish</span>
         </Button>
       )}
     </div>

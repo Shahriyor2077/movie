@@ -19,3 +19,14 @@
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
 }
+
+/* src/index.css yoki src/global.css */
+.dark .ant-dropdown-menu-item-selected {
+  background-color: #1f2937 !important; /* bg-gray-800 */
+  color: #f87171 !important;           /* text-red-400 */
+}
+
+.dark .ant-dropdown-menu-item-selected .ant-dropdown-menu-item-icon {
+  color: #f87171 !important;           /* belgi rangi */
+}
+
